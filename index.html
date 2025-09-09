@@ -225,9 +225,9 @@
              <div class="container mx-auto px-6 text-center">
                 <div class="max-w-3xl mx-auto p-8 md:p-12 border-gradient">
                     <h2 class="text-4xl md:text-5xl font-headline font-bold text-white">Have a project in mind?</h2>
-                    <p class="mt-6 text-lg text-gray-300">We partner with ambitious companies to build the next generation of software. If you have an idea that needs expert execution, we'd love to hear from you.</p>
+                    <p class="mt-6 text-lg text-gray-300">We partner with ambitious companies and individuals to build the next generation of software. If you have an idea that needs expert execution, we'd love to hear from you.</p>
                     <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="mt-8 max-w-lg mx-auto">
-                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        <input type="hidden" name="access_key" value="5c9f845c-97bd-420d-acd7-a28ccce8995e">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                            <input type="text" name="name" placeholder="Your Name" required class="bg-gray-800 border border-gray-700 rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-400">
                            <input type="email" name="email" placeholder="Your Email" required class="bg-gray-800 border border-gray-700 rounded-md px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-amber-400">
@@ -280,6 +280,7 @@
                     const containerTop = horizontalContainer.offsetTop;
                     const containerHeight = horizontalContainer.offsetHeight;
                     const scrollableHeight = containerHeight - window.innerHeight;
+                    
                     if (scrollTop >= containerTop && scrollTop <= containerTop + scrollableHeight) {
                         const progress = (scrollTop - containerTop) / scrollableHeight;
                         const scrollDistance = (horizontalScroll.scrollWidth - window.innerWidth) * progress;
@@ -289,6 +290,9 @@
                          horizontalScroll.style.transform = `translateX(0px)`;
                          progressBar.style.width = `0%`;
                     } else {
+                         // FIX: Lock the scroll to the end position when scrolling past the container
+                         const finalScrollDistance = horizontalScroll.scrollWidth - window.innerWidth;
+                         horizontalScroll.style.transform = `translateX(-${finalScrollDistance}px)`;
                          progressBar.style.width = `100%`;
                     }
                 });
