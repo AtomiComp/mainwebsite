@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtomiComp Industries | Digital Product Studio</title>
+    <meta name="description" content="AtomiComp is a digital product studio based in Bengaluru, specializing in building AI-powered software and custom applications.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicon (Using an inline SVG for simplicity) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚛️</text></svg>">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #16a34a, #2563eb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        .bg-grid {
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200 antialiased">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 backdrop-blur-lg border-b border-gray-700/50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <!-- NEW SVG LOGO - Closer to the official brand logo -->
+                <svg class="h-8 w-8" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="24" cy="24" rx="18" ry="10" stroke="#2563eb" stroke-width="2.5"/>
+                    <ellipse cx="24" cy="24" rx="18" ry="10" stroke="#16a34a" stroke-width="2.5" transform="rotate(60 24 24)"/>
+                    <ellipse cx="24" cy="24" rx="18" ry="10" stroke="#60a5fa" stroke-width="2.5" transform="rotate(-60 24 24)"/>
+                    <circle cx="6" cy="24" r="1.5" fill="#2563eb"/>
+                    <circle cx="42" cy="24" r="1.5" fill="#2563eb"/>
+                    <circle cx="10.01" cy="40.39" r="1.5" fill="#16a34a"/>
+                    <circle cx="37.99" cy="7.61" r="1.5" fill="#16a34a"/>
+                    <circle cx="10.01" cy="7.61" r="1.5" fill="#60a5fa"/>
+                    <circle cx="37.99" cy="40.39" r="1.5" fill="#60a5fa"/>
+                </svg>
+                <span class="text-xl font-bold text-white">AtomiComp</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a>
+                <a href="#expertise" class="text-gray-300 hover:text-white transition-colors">Expertise</a>
+                <a href="#products" class="text-gray-300 hover:text-white transition-colors">Products</a>
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-md transition-transform hover:scale-105">Contact Us</a>
+            </nav>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#about" class="block py-2 px-6 text-gray-300 hover:bg-gray-800">About</a>
+            <a href="#expertise" class="block py-2 px-6 text-gray-300 hover:bg-gray-800">Expertise</a>
+            <a href="#products" class="block py-2 px-6 text-gray-300 hover:bg-gray-800">Products</a>
+            <a href="#contact" class="block py-2 px-6 text-gray-300 hover:bg-gray-800">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-grid overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-900/80 to-gray-900"></div>
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 leading-tight">
+                    We Build <span class="gradient-text">Intelligent Software Products,</span> from Concept to Launch.
+                </h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl text-gray-400 mb-10">
+                    AtomiComp is a Bengaluru-based digital product studio. We develop our own in-house applications and partner with companies to build custom, AI-powered software solutions.
+                </p>
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform hover:scale-105 shadow-lg shadow-blue-500/20">
+                    Let's Build Together
+                </a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">A Founding Team Built on Expertise</h2>
+                    <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">We are three friends who combined our diverse skills in software development, AI, and design to create products that solve real-world problems.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-gray-800/50 p-8 rounded-lg">
+                        <div class="text-4xl text-green-400 mb-4"><i class="fas fa-brain"></i></div>
+                        <h3 class="text-xl font-semibold text-white mb-2">AI & Data</h3>
+                        <p class="text-gray-400">Leveraging cutting-edge models to build smart, predictive, and efficient applications.</p>
+                    </div>
+                    <div class="bg-gray-800/50 p-8 rounded-lg">
+                        <div class="text-4xl text-blue-400 mb-4"><i class="fas fa-code"></i></div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Full-Stack Development</h3>
+                        <p class="text-gray-400">Crafting robust, scalable, and secure applications from the database to the user interface.</p>
+                    </div>
+                    <div class="bg-gray-800/50 p-8 rounded-lg">
+                        <div class="text-4xl text-indigo-400 mb-4"><i class="fas fa-drafting-compass"></i></div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Product Design</h3>
+                        <p class="text-gray-400">Focusing on intuitive user experiences that are both functional and beautiful.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section id="expertise" class="py-20 bg-gray-900 border-t border-b border-gray-800">
+             <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Our Core Competencies</h2>
+                    <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">We turn complex requirements into high-quality software.</p>
+                </div>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-2xl text-blue-500 mt-1"><i class="fas fa-cogs"></i></div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-white">Custom Application Development</h3>
+                            <p class="text-gray-400">Building tailor-made software solutions that perfectly fit your business processes.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="text-2xl text-blue-500 mt-1"><i class="fas fa-bolt"></i></div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-white">AI & ML Integration</h3>
+                            <p class="text-gray-400">Infusing your applications with the power of artificial intelligence for smarter features.</p>
+                        </div>
+                    </div>
+                     <div class="flex items-start space-x-4">
+                        <div class="text-2xl text-blue-500 mt-1"><i class="fas fa-cloud"></i></div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-white">Cloud-Native Solutions</h3>
+                            <p class="text-gray-400">Expertise in serverless architectures using Firebase and Google Cloud for ultimate scalability.</p>
+                        </div>
+                    </div>
+                     <div class="flex items-start space-x-4">
+                        <div class="text-2xl text-blue-500 mt-1"><i class="fas fa-lightbulb"></i></div>
+                        <div>
+                            <h3 class="text-lg font-semibold text-white">End-to-End Product Development</h3>
+                            <p class="text-gray-400">Taking your idea from a simple concept to a fully deployed and operational product.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Our In-House Products</h2>
+                    <p class="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">We don't just build for clients—we build for ourselves. Here's a look at what we've created.</p>
+                </div>
+                <div class="max-w-4xl mx-auto bg-gray-800/50 rounded-xl shadow-lg overflow-hidden md:flex md:items-center">
+                    <div class="md:w-1/2 p-8 md:p-12">
+                        <h3 class="text-sm font-bold uppercase tracking-wider text-blue-400 mb-2">Featured Product</h3>
+                        <h4 class="text-2xl font-bold text-white mb-4">PunchIn Scholar Companion</h4>
+                        <p class="text-gray-400 mb-6">An AI-powered web app for students to track attendance, manage their schedule, and get smart recommendations for study planning. It's a complete solution built from the ground up on a modern, serverless stack.</p>
+                        <a href="https://punchin-tracker.vercel.app" target="_blank" class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-5 rounded-md transition-transform hover:scale-105">
+                            View Live Demo <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                    <div class="md:w-1/2">
+                        <!-- Replace this with a nice screenshot of PunchIn -->
+                        <img src="https://placehold.co/600x400/1f2937/a5b4fc?text=PunchIn+Screenshot" alt="Screenshot of PunchIn application" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Have an idea? Let's talk.</h2>
+                <p class="mt-4 text-lg text-gray-400 max-w-xl mx-auto">
+                    Whether you have a concept for a new product or need help with an existing one, we'd love to hear from you.
+                </p>
+                <div class="mt-8">
+                     <a href="mailto:team.atomicomp@gmail.com" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-transform hover:scale-105 shadow-lg shadow-blue-500/20 inline-block">
+                        <i class="fas fa-envelope mr-3"></i> team.atomicomp@gmail.com
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-500">
+            <div class="flex justify-center items-center space-x-6 mb-4">
+                 <a href="#" class="flex items-center space-x-2 text-gray-300">
+                    <!-- NEW SVG LOGO in Footer -->
+                    <svg class="h-6 w-6" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="24" cy="24" rx="18" ry="10" stroke="#2563eb" stroke-width="2.5"/>
+                        <ellipse cx="24" cy="24" rx="18" ry="10" stroke="#16a34a" stroke-width="2.5" transform="rotate(60 24 24)"/>
+                        <ellipse cx="24" cy="24" rx="18" ry="10" stroke="#60a5fa" stroke-width="2.5" transform="rotate(-60 24 24)"/>
+                        <circle cx="6" cy="24" r="1.5" fill="#2563eb"/>
+                        <circle cx="42" cy="24" r="1.5" fill="#2563eb"/>
+                        <circle cx="10.01" cy="40.39" r="1.5" fill="#16a34a"/>
+                        <circle cx="37.99" cy="7.61" r="1.5" fill="#16a34a"/>
+                        <circle cx="10.01" cy="7.61" r="1.5" fill="#60a5fa"/>
+                        <circle cx="37.99" cy="40.39" r="1.5" fill="#60a5fa"/>
+                    </svg>
+                    <span class="text-lg font-semibold">AtomiComp Industries</span>
+                </a>
+            </div>
+            <div class="mb-4">
+                <!-- Add LinkedIn profile link when ready -->
+                <a href="#" class="text-gray-400 hover:text-white mx-3 text-xl"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white mx-3 text-xl"><i class="fab fa-github"></i></a>
+            </div>
+            <p>&copy; 2025 AtomiComp Industries. All rights reserved.</p>
+            <p class="text-sm mt-1">Based in Bengaluru, India 🇮🇳</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let i = 0; i < mobileMenuLinks.length; i++) {
+            mobileMenuLinks[i].addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
